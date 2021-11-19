@@ -63,9 +63,9 @@ class User implements UserInterface
     {
         $theseroles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $theseroles[] = 'ROLE_USER';
 
-        return array_unique($roles);
+        return array_unique($theseroles);
     }
 
     public function setRoles(array $roles): self

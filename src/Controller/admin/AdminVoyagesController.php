@@ -36,7 +36,7 @@ class AdminVoyagesController extends AbstractController {
      */
     private $om;
 
-    private const PAGE = 'admin.voyages';
+     const PAGE = 'admin.voyages';
     /**
      * 
      * @param VisiteRepository $repository

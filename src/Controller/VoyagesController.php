@@ -24,7 +24,7 @@ class VoyagesController extends AbstractController{
      * @var VisiteRepository
      */
     private  $repository;
-    private const PAGE = "pages/voyages.html.twig";
+    const PAGE = "pages/voyages.html.twig";
     function __construct(VisiteRepository $repository) {
         $this->repository = $repository;
     }
@@ -51,7 +51,7 @@ class VoyagesController extends AbstractController{
         if($this->isCsrfTokenValid('filtre_'.$champ, $request->get('_token'))) {
         $valeur = $request->get("recherche");
         $visites = $this->repository->findByEqualValue($champ, $valeur);
-        return $this->render(PAGE, [
+        return $this->render(j, [
             'visites' =>$visites
         ]);
         }
